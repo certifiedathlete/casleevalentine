@@ -1,8 +1,0 @@
-[16-Mar-2012 02:40:45] PHP Parse error:  syntax error, unexpected ')' in /home/ctv0704/public_html/certifiedathlete.org/sports/main_profile/main_profile_player_stats.php on line 234
-[17-Mar-2012 10:01:55] PHP Fatal error:  Class 'Model' not found in /home/ctv0704/public_html/certifiedathlete.org/sports/main_profile/main_profile_player_stats.php on line 28
-[17-Mar-2012 10:01:55] PHP Fatal error:  Class 'Model' not found in /home/ctv0704/public_html/certifiedathlete.org/sports/main_profile/main_profile_player_stats.php on line 28
-[17-Mar-2012 10:02:48] PHP Fatal error:  Class 'Model' not found in /home/ctv0704/public_html/certifiedathlete.org/sports/main_profile/main_profile_player_stats.php on line 28
-[17-Mar-2012 10:02:49] PHP Fatal error:  Class 'Model' not found in /home/ctv0704/public_html/certifiedathlete.org/sports/main_profile/main_profile_player_stats.php on line 28
-[17-Mar-2012 10:04:27] PHP Fatal error:  Class 'Model' not found in /home/ctv0704/public_html/certifiedathlete.org/sports/main_profile/main_profile_player_stats.php on line 28
-[17-Mar-2012 10:04:27] PHP Fatal error:  Class 'Model' not found in /home/ctv0704/public_html/certifiedathlete.org/sports/main_profile/main_profile_player_stats.php on line 28
-[17-Aug-2012 20:02:34] PHP Fatal error:  Class 'CA_Security' not found in /home/ctv0704/public_html/certifiedathlete.com/wp-content/themes/Certified_Athlete/certified-athlete/ca_sports/main_profile/main_profile_stats_update_form.php on line 7
