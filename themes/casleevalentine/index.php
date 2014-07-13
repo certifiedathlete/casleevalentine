@@ -1,4 +1,23 @@
 <?php get_header(); ?>
+
+
+
+
+
+
+
+
+
+<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+
+<?php the_title(); ?></h1>  
+        <div class="entry">
+            <?php the_content(); ?>
+        </div><!-- entry -->
+<?php endwhile; ?>
+<?php endif; ?>
+
+
     <header class="header">
         <a href="<?php echo bloginfo('template_directory'); ?>/index.html" class="logo">
             <!-- Add the class icon to your logo image or logo icon to add the margining -->
