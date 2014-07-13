@@ -42,7 +42,7 @@ class CA_Custom_Post_Type {
             'description' => 'Holds our ' . $plural_label . ' and ' . $singular_label . ' specific data',
             'public' => true,
             'menu_position' => 5,
-            'supports' => array('title', 'editor', 'thumbnail', 'comments'),
+            'supports' => array('title', 'thumbnail', 'comments'),
             'has_archive' => true,
             'rewrite' => array('slug' => sanitize_title_with_dashes($plural_label)),
             'show_in_menu' => 'certified_athlete_admin_menu_page',

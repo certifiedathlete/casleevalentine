@@ -8,25 +8,27 @@ class CA_Custom_Meta_Box {
     protected $textdomian;
     protected $posts;
     protected $ca_post_type;
+    protected $allowed_ca_post_types_array = array('post', 'page', 'ca_organization');
     protected $post_type_meta_box_variables = array();
 
     /**
      * Hook into the appropriate actions when the class is constructed.
      */
-    public function __construct($ca_post_type, $post_type_meta_box_variables =  array(), $textdomain) {
+    public function __construct($ca_post_type, $textdomain = '', $post_type_meta_box_variables = array()) {
         $this->textdomain = $textdomain;
         $this->posts = array();
         $this->ca_post_type = $ca_post_type;
         $this->post_type_meta_box_variables = $post_type_meta_box_variables;
-        add_action('add_meta_boxes', array($this, 'create_ca_meta_box'));//when its time to add meta boxes to the post, WP will call this function
-        add_action('save_post', array($this, 'save'));//when its time to save your post, WP will call your save function
+        add_action('add_meta_boxes', array($this, 'create_ca_meta_box')); //when its time to add meta boxes to the post, WP will call this function
+        add_action('save_post', array($this, 'save')); //when its time to save your post, WP will call your save function
     }
 
     /**
      * Adds the meta box container.
      */
-    public function create_ca_meta_box($post_type) {
-        $post_types = array('post', 'page', 'ca_organization');     //limit meta box to certain post types
+    public function create_ca_meta_box() {
+        $post_type = $this->ca_post_type;
+        $post_types = $this->allowed_ca_post_types_array;     //limit meta box to certain post types
         if (in_array($post_type, $post_types)) {
             add_meta_box($this->post_type_meta_box_variables['name'], __($this->post_type_meta_box_variables['headline'], $this->textdomain), array($this, 'render_ca_meta_box_content'), $post_type, 'advanced', 'high');
         }
@@ -45,32 +47,38 @@ class CA_Custom_Meta_Box {
          */
 
         // Check if our nonce is set.
-        if (!isset($_POST['myplugin_inner_custom_box_nonce']))
+        if (!isset($_POST['myplugin_inner_custom_box_nonce'])) {
             return $post_id;
+        }
 
         $nonce = $_POST['myplugin_inner_custom_box_nonce'];
 
         // Verify that the nonce is valid.
-        if (!wp_verify_nonce($nonce, 'myplugin_inner_custom_box'))
+        if (!wp_verify_nonce($nonce, 'myplugin_inner_custom_box')) {
             return $post_id;
+        }
 
         // If this is an autosave, our form has not been submitted,
         //     so we don't want to do anything.
-        if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE)
+        if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) {
             return $post_id;
+        }
 
         // Check the user's permissions.
         if ('page' == $_POST['post_type']) {
 
-            if (!current_user_can('edit_page', $post_id))
+            if (!current_user_can('edit_page', $post_id)) {
                 return $post_id;
+            }
         } else {
 
-            if (!current_user_can('edit_post', $post_id))
+            if (!current_user_can('edit_post', $post_id)) {
                 return $post_id;
+            }
         }
 
         /* OK, its safe for us to save the data now. */
+        //include file with specific fields to save per custom post type
 
         // Sanitize the user input.
         $mydata = sanitize_text_field($_POST['myplugin_new_field']);
@@ -86,6 +94,7 @@ class CA_Custom_Meta_Box {
      */
     public function render_ca_meta_box_content($post) {
 
+        //include file with all specific settings for custom post type fields
         // Add an nonce field so we can check for it later.
         wp_nonce_field('myplugin_inner_custom_box', 'myplugin_inner_custom_box_nonce');
 
@@ -93,6 +102,13 @@ class CA_Custom_Meta_Box {
         $value = get_post_meta($post->ID, '_my_meta_value_key', true);
 
         // Display the form, using the current value.
+        //include a file with options depending on each post type
+        echo '<label for="myplugin_new_field">';
+        _e($this->post_type_meta_box_variables['name'], $this->textdomain);
+        echo '</label> ';
+        echo '<input type="text" id="myplugin_new_field" name="myplugin_new_field"';
+        echo ' value="' . esc_attr($value) . '" size="25" />';
+        echo '<br>';
         echo '<label for="myplugin_new_field">';
         _e($this->post_type_meta_box_variables['name'], $this->textdomain);
         echo '</label> ';
@@ -101,4 +117,3 @@ class CA_Custom_Meta_Box {
     }
 
 }
-

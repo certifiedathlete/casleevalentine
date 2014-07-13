@@ -92,7 +92,7 @@ $ca_organization_meta_box_variables = array(
     
 );
 
-$ca_organization_meta = new CA_Custom_Meta_Box('ca_organization', $ca_organization_meta_box_variables, CA_TEXT_DOMIAN);
+$ca_organization_meta = new CA_Custom_Meta_Box('ca_organization', CA_TEXT_DOMIAN, $ca_organization_meta_box_variables);
 
 $ca_team_settings = array();
 $ca_team = new CA_Custom_Post_Type(CA_TEXT_DOMIAN);
