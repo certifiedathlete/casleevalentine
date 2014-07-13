@@ -79,12 +79,22 @@ class CA_Custom_Meta_Box {
 
         /* OK, its safe for us to save the data now. */
         //include file with specific fields to save per custom post type
-
         // Sanitize the user input.
         $mydata = sanitize_text_field($_POST['myplugin_new_field']);
-
         // Update the meta field.
         update_post_meta($post_id, '_my_meta_value_key', $mydata);
+        
+        $ca_organization_date_founded = sanitize_text_field($_POST['ca_organization_date_founded']);
+        // Update the meta field.
+        update_post_meta($post_id, 'ca_organization_date_founded', $ca_organization_date_founded);
+        
+        $ca_organization_name = sanitize_text_field($_POST['ca_organization_name']);
+        // Update the meta field.
+        update_post_meta($post_id, 'ca_organization_name', $ca_organization_name);
+        
+        $ca_organization_address = sanitize_text_field($_POST['ca_organization_address']);
+        // Update the meta field.
+        update_post_meta($post_id, 'ca_organization_address', $ca_organization_address);
     }
 
     /**
@@ -100,20 +110,38 @@ class CA_Custom_Meta_Box {
 
         // Use get_post_meta to retrieve an existing value from the database.
         $value = get_post_meta($post->ID, '_my_meta_value_key', true);
+        $ca_organization_name = get_post_meta($post->ID, 'ca_organization_name', true);
+        $ca_organization_address = get_post_meta($post->ID, 'ca_organization_address', true);
+        $ca_organization_date_founded = get_post_meta($post->ID, 'ca_organization_date_founded', true);
 
         // Display the form, using the current value.
         //include a file with options depending on each post type
-        echo '<label for="myplugin_new_field">';
-        _e($this->post_type_meta_box_variables['name'], $this->textdomain);
-        echo '</label> ';
-        echo '<input type="text" id="myplugin_new_field" name="myplugin_new_field"';
-        echo ' value="' . esc_attr($value) . '" size="25" />';
-        echo '<br>';
-        echo '<label for="myplugin_new_field">';
-        _e($this->post_type_meta_box_variables['name'], $this->textdomain);
-        echo '</label> ';
-        echo '<input type="text" id="myplugin_new_field" name="myplugin_new_field"';
-        echo ' value="' . esc_attr($value) . '" size="25" />';
+        ?>
+        <label for="myplugin_new_field">
+        <?php _e($this->post_type_meta_box_variables['name'], $this->textdomain); ?>
+        </label>
+        <input type="text" id="myplugin_new_field" name="myplugin_new_field" value="<?php echo esc_attr($value); ?>" size="25" />
+        <br>
+
+        <label for="ca_organization_date_founded">
+        <?php _e($this->post_type_meta_box_variables['ca_organization_date_founded'], $this->textdomain); ?>
+        </label>
+        <input type="text" id="ca_organization_date_founded" name="ca_organization_date_founded" value="<?php echo esc_attr($ca_organization_date_founded); ?>" size="25" />
+        <br>
+
+        <label for="ca_organization_name">
+        <?php _e($this->post_type_meta_box_variables['ca_organization_name'], $this->textdomain); ?>
+        </label>
+        <input type="text" id="ca_organization_name" name="ca_organization_name" value="<?php echo esc_attr($ca_organization_name); ?>" size="25" />
+        <br>
+
+        <label for="ca_organization_address">
+        <?php _e($this->post_type_meta_box_variables['ca_organization_address'], $this->textdomain); ?>
+        </label>
+        <input type="text" id="ca_organization_address" name="ca_organization_address" value="<?php echo esc_attr($ca_organization_address); ?>" size="25" />
+        <br>
+
+        <?php
     }
 
 }

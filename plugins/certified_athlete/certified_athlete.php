@@ -88,6 +88,9 @@ $ca_organization->create_ca_post_type('ca_organization', 'Organization', 'Organi
 $ca_organization_meta_box_variables = array(
     
     'name' => 'ca_organization_name',
+    'ca_organization_name' => 'Organization Name',
+    'ca_organization_address' => 'Address',
+    'ca_organization_date_founded' => 'Date Founded',
     'headline' => 'Organization Details',
     
 );
