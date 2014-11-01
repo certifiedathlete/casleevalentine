@@ -60,7 +60,7 @@
                             <?php } ?>
                         </ul>
                     </div>
-                    <div class="column two">
+                    <div class="col-md-2">
                         <ul>
                             <li>
                                 <?php get_search_form(); ?>  

@@ -15,9 +15,9 @@
 
                 <div class="row">
 
-                    <div class="column two">
+                    <div class="col-md-2">
                         &nbsp;
-                    </div><!-- closes column two -->
+                    </div><!-- closes col-md-2 -->
                     <div class="column ten">
                         <div class="ad_728x90_ad">
                             <div class="ad_wrapper_ad">
@@ -35,9 +35,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="column two">
+                    <div class="col-md-2">
                         &nbsp;
-                    </div><!-- closes column two -->
+                    </div><!-- closes col-md-2 -->
                     <div class="column ten">
 
                         <p class="nav-previous">
@@ -54,7 +54,7 @@
             <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
                     <div class="post_container row box_heading_margin">  
-                        <div class="column two">
+                        <div class="col-md-2">
                             <div class="post_meta_box_border">
                                 <div class="post_meta_box"> 
                                     <!-- Display the date (November 16th, 2009 format) and a link to other posts by this posts author. -->
@@ -63,7 +63,7 @@
                                     <p class="postmetadata">Posted in <?php the_category(', '); ?></p>
                                 </div> <!-- closes the post_meta_box_border -->
                             </div> <!-- closes the post_meta_box -->
-                        </div><!-- closes column two -->
+                        </div><!-- closes col-md-2 -->
                         <div class="column ten">
                             <div class="post_border">
                                 <div class="post">  
@@ -92,9 +92,9 @@
                 <!-- REALLY stop The Loop. -->
             <?php endif; ?>
             <div class="row">
-                <div class="column two">
+                <div class="col-md-2">
                     &nbsp;
-                </div><!-- closes column two -->
+                </div><!-- closes col-md-2 -->
                 <div class="column ten">
                     <div class="ad_728x90_ad">
                         <div class="ad_wrapper_ad">
@@ -112,9 +112,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="column two">
+                <div class="col-md-2">
                     &nbsp;
-                </div><!-- closes column two -->
+                </div><!-- closes col-md-2 -->
                 <div class="column ten">
 
                     <p class="nav-previous">

@@ -54,6 +54,7 @@ if (!defined('CA_TEXT_DOMIAN'))
  * **************************************** */
 
 add_theme_support('woocommerce');
+add_theme_support('certified_athlete');
 
 
 /* * ****************************************
@@ -81,6 +82,8 @@ register_deactivation_hook(__FILE__, 'certified_athlete_deactivation');
 include_once(CA_PLUGIN_DIR . '/library/CA_Custom_Post_Type.php');
 include_once(CA_PLUGIN_DIR . '/library/CA_Custom_Meta_Box.php');
 
+
+//include each section below in its own class file
 $ca_organization_settings = array();
 $ca_organization = new CA_Custom_Post_Type(CA_TEXT_DOMIAN);
 $ca_organization->create_ca_post_type('ca_organization', 'Organization', 'Organizations', $ca_organization_settings);
