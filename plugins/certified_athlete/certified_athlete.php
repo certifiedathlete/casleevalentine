@@ -154,25 +154,6 @@ add_action('wp_ajax_nopriv_' . $_REQUEST['action'], $_REQUEST['action']); //One 
 // if logged in:
 add_action('wp_ajax_' . $_POST['action'], $_POST['action']); //One call to handle all private ajax forms
 
-/* * ****************************************
- * CDN Jquery
- * 
- * **************************************** */
-/* JQuery from Google CDN */
-
-function ca_load_jquery_from_google() {
-    if (!is_admin()) {
-        wp_deregister_script('jquery');
-        wp_register_script('jquery', 'http://code.jquery.com/jquery-latest.min.js', '', '1.6');
-        wp_enqueue_script('jquery');
-        //datepicker
-        wp_enqueue_script('jquery-ui-datepicker');
-        //datepicker style
-        wp_enqueue_style('jquery-ui-datepicker', 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.2/themes/smoothness/jquery-ui.css');
-    }
-}
-
-add_action('init', 'ca_load_jquery_from_google');
 
 /* * ****************************************
  * EnQueue JS
@@ -182,12 +163,12 @@ add_action('init', 'ca_load_jquery_from_google');
 
 function load_certified_athlete_js() {
     if (!is_admin()) {
-        wp_register_script('certified_athlete_js', 'js/certified_athlete_ajax.js', '', '');
+        wp_register_script('certified_athlete_js', CA_PLUGIN_URL .'/js/certified_athlete_ajax.js', '', '');
         wp_enqueue_script('certified_athlete_js');
     }
 }
 
-add_action('init', 'load_certified_athlete_js');
+add_action('wp_footer', 'load_certified_athlete_js');
 /* * ****************************************
  * EnQueue Styles
  * 

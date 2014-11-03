@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>AdminLTE | Timeline</title>
+        <title>AdminLTE | Invoice</title>
         <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
         <!-- bootstrap 3.0.2 -->
         <link href="../../css/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -23,8 +23,8 @@
     <body class="skin-blue">
         <!-- header logo: style can be found in header.less -->
         <header class="header">
-            <a href="../../index.html" class="logo">
-                <!-- Add the class icon to your logo image or logo icon to add the margining -->
+            <a href="index.php" class="logo">
+                <!-- Add the class .icon to your logo image or logo icon to add some margining -->
                 AdminLTE
             </a>
             <!-- Header Navbar: style can be found in header.less -->
@@ -270,7 +270,7 @@
         </header>
         <div class="wrapper row-offcanvas row-offcanvas-left">
             <!-- Left side column. contains the logo and sidebar -->
-            <aside class="left-side sidebar-offcanvas">
+            <aside class="left-side sidebar-offcanvas">                
                 <!-- sidebar: style can be found in sidebar.less -->
                 <section class="sidebar">
                     <!-- Sidebar user panel -->
@@ -297,12 +297,12 @@
                     <!-- sidebar menu: : style can be found in sidebar.less -->
                     <ul class="sidebar-menu">
                         <li>
-                            <a href="../../index.html">
+                            <a href="../../index.php">
                                 <i class="fa fa-dashboard"></i> <span>Dashboard</span>
                             </a>
                         </li>
                         <li>
-                            <a href="../widgets.html">
+                            <a href="../widgets.php">
                                 <i class="fa fa-th"></i> <span>Widgets</span> <small class="badge pull-right bg-green">new</small>
                             </a>
                         </li>
@@ -313,23 +313,23 @@
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="../charts/morris.html"><i class="fa fa-angle-double-right"></i> Morris</a></li>
-                                <li><a href="../charts/flot.html"><i class="fa fa-angle-double-right"></i> Flot</a></li>
-                                <li><a href="../charts/inline.html"><i class="fa fa-angle-double-right"></i> Inline charts</a></li>
+                                <li><a href="../charts/morris.php"><i class="fa fa-angle-double-right"></i> Morris</a></li>
+                                <li><a href="../charts/flot.php"><i class="fa fa-angle-double-right"></i> Flot</a></li>
+                                <li><a href="../charts/inline.php"><i class="fa fa-angle-double-right"></i> Inline charts</a></li>
                             </ul>
                         </li>
-                        <li class="treeview active">
+                        <li class="treeview">
                             <a href="#">
                                 <i class="fa fa-laptop"></i>
                                 <span>UI Elements</span>
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="general.html"><i class="fa fa-angle-double-right"></i> General</a></li>
-                                <li><a href="icons.html"><i class="fa fa-angle-double-right"></i> Icons</a></li>
-                                <li><a href="buttons.html"><i class="fa fa-angle-double-right"></i> Buttons</a></li>
-                                <li><a href="sliders.html"><i class="fa fa-angle-double-right"></i> Sliders</a></li>
-                                <li class="active"><a href="timeline.html"><i class="fa fa-angle-double-right"></i> Timeline</a></li>
+                                <li><a href="../UI/general.php"><i class="fa fa-angle-double-right"></i> General</a></li>
+                                <li><a href="../UI/icons.php"><i class="fa fa-angle-double-right"></i> Icons</a></li>
+                                <li><a href="../UI/buttons.php"><i class="fa fa-angle-double-right"></i> Buttons</a></li>
+                                <li><a href="../UI/sliders.php"><i class="fa fa-angle-double-right"></i> Sliders</a></li>
+                                <li><a href="../UI/timeline.php"><i class="fa fa-angle-double-right"></i> Timeline</a></li>
                             </ul>
                         </li>
                         <li class="treeview">
@@ -338,9 +338,9 @@
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="../forms/general.html"><i class="fa fa-angle-double-right"></i> General Elements</a></li>
-                                <li><a href="../forms/advanced.html"><i class="fa fa-angle-double-right"></i> Advanced Elements</a></li>
-                                <li><a href="../forms/editors.html"><i class="fa fa-angle-double-right"></i> Editors</a></li>
+                                <li><a href="../forms/general.php"><i class="fa fa-angle-double-right"></i> General Elements</a></li>
+                                <li><a href="../forms/advanced.php"><i class="fa fa-angle-double-right"></i> Advanced Elements</a></li>
+                                <li><a href="../forms/editors.php"><i class="fa fa-angle-double-right"></i> Editors</a></li>                                
                             </ul>
                         </li>
                         <li class="treeview">
@@ -349,35 +349,35 @@
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="../tables/simple.html"><i class="fa fa-angle-double-right"></i> Simple tables</a></li>
-                                <li><a href="../tables/data.html"><i class="fa fa-angle-double-right"></i> Data tables</a></li>
+                                <li><a href="../tables/simple.php"><i class="fa fa-angle-double-right"></i> Simple tables</a></li>
+                                <li><a href="../tables/data.php"><i class="fa fa-angle-double-right"></i> Data tables</a></li>
                             </ul>
                         </li>
                         <li>
-                            <a href="../calendar.html">
+                            <a href="../calendar.php">
                                 <i class="fa fa-calendar"></i> <span>Calendar</span>
                                 <small class="badge pull-right bg-red">3</small>
                             </a>
                         </li>
                         <li>
-                            <a href="../mailbox.html">
+                            <a href="../mailbox.php">
                                 <i class="fa fa-envelope"></i> <span>Mailbox</span>
                                 <small class="badge pull-right bg-yellow">12</small>
                             </a>
                         </li>
-                        <li class="treeview">
+                        <li class="treeview active">
                             <a href="#">
                                 <i class="fa fa-folder"></i> <span>Examples</span>
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="../examples/invoice.html"><i class="fa fa-angle-double-right"></i> Invoice</a></li>
-                                <li><a href="../examples/login.html"><i class="fa fa-angle-double-right"></i> Login</a></li>
-                                <li><a href="../examples/register.html"><i class="fa fa-angle-double-right"></i> Register</a></li>
-                                <li><a href="../examples/lockscreen.html"><i class="fa fa-angle-double-right"></i> Lockscreen</a></li>
-                                <li><a href="../examples/404.html"><i class="fa fa-angle-double-right"></i> 404 Error</a></li>
-                                <li><a href="../examples/500.html"><i class="fa fa-angle-double-right"></i> 500 Error</a></li>
-                                <li><a href="../examples/blank.html"><i class="fa fa-angle-double-right"></i> Blank Page</a></li>
+                                <li class="active"><a href="invoice.php"><i class="fa fa-angle-double-right"></i> Invoice</a></li>
+                                <li><a href="login.php"><i class="fa fa-angle-double-right"></i> Login</a></li>
+                                <li><a href="register.php"><i class="fa fa-angle-double-right"></i> Register</a></li>
+                                <li><a href="lockscreen.php"><i class="fa fa-angle-double-right"></i> Lockscreen</a></li>
+                                <li><a href="404.php"><i class="fa fa-angle-double-right"></i> 404 Error</a></li>
+                                <li><a href="500.php"><i class="fa fa-angle-double-right"></i> 500 Error</a></li>                                
+                                <li><a href="blank.php"><i class="fa fa-angle-double-right"></i> Blank Page</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -386,175 +386,165 @@
             </aside>
 
             <!-- Right side column. Contains the navbar and content of the page -->
-            <aside class="right-side">
+            <aside class="right-side">                
                 <!-- Content Header (Page header) -->
                 <section class="content-header">
                     <h1>
-                        Timeline
-                        <small>example</small>
+                        Invoice
+                        <small>#007612</small>
                     </h1>
                     <ol class="breadcrumb">
                         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-                        <li><a href="#">UI</a></li>
-                        <li class="active">Timeline</li>
+                        <li><a href="#">Examples</a></li>
+                        <li class="active">Blank page</li>
                     </ol>
                 </section>
 
+                <div class="pad margin no-print">
+                    <div class="alert alert-info" style="margin-bottom: 0!important;">
+                        <i class="fa fa-info"></i>
+                        <b>Note:</b> This page has been enhanced for printing. Click the print button at the bottom of the invoice to test.
+                    </div>
+                </div>
+
                 <!-- Main content -->
-                <section class="content">
-
-                    <!-- row -->
-                    <div class="row">                        
-                        <div class="col-md-12">
-                            <!-- The time line -->
-                            <ul class="timeline">
-                                <!-- timeline time label -->
-                                <li class="time-label">
-                                    <span class="bg-red">
-                                        10 Feb. 2014
-                                    </span>
-                                </li>
-                                <!-- /.timeline-label -->
-                                <!-- timeline item -->
-                                <li>
-                                    <i class="fa fa-envelope bg-blue"></i>
-                                    <div class="timeline-item">
-                                        <span class="time"><i class="fa fa-clock-o"></i> 12:05</span>
-                                        <h3 class="timeline-header"><a href="#">Support Team</a> sent you and email</h3>
-                                        <div class="timeline-body">
-                                            Etsy doostang zoodles disqus groupon greplin oooj voxy zoodles,
-                                            weebly ning heekya handango imeem plugg dopplr jibjab, movity
-                                            jajah plickers sifteo edmodo ifttt zimbra. Babblely odeo kaboodle
-                                            quora plaxo ideeli hulu weebly balihoo...
-                                        </div>
-                                        <div class='timeline-footer'>
-                                            <a class="btn btn-primary btn-xs">Read more</a>
-                                            <a class="btn btn-danger btn-xs">Delete</a>
-                                        </div>
-                                    </div>
-                                </li>
-                                <!-- END timeline item -->
-                                <!-- timeline item -->
-                                <li>
-                                    <i class="fa fa-user bg-aqua"></i>
-                                    <div class="timeline-item">
-                                        <span class="time"><i class="fa fa-clock-o"></i> 5 mins ago</span>
-                                        <h3 class="timeline-header no-border"><a href="#">Sarah Young</a> accepted your friend request</h3>
-                                    </div>
-                                </li>
-                                <!-- END timeline item -->
-                                <!-- timeline item -->
-                                <li>
-                                    <i class="fa fa-comments bg-yellow"></i>
-                                    <div class="timeline-item">
-                                        <span class="time"><i class="fa fa-clock-o"></i> 27 mins ago</span>
-                                        <h3 class="timeline-header"><a href="#">Jay White</a> commented on your post</h3>
-                                        <div class="timeline-body">
-                                            Take me to your leader!
-                                            Switzerland is small and neutral!
-                                            We are more like Germany, ambitious and misunderstood!
-                                        </div>
-                                        <div class='timeline-footer'>
-                                            <a class="btn btn-warning btn-flat btn-xs">View comment</a>
-                                        </div>
-                                    </div>
-                                </li>
-                                <!-- END timeline item -->
-                                <!-- timeline time label -->
-                                <li class="time-label">
-                                    <span class="bg-green">
-                                        3 Jan. 2014
-                                    </span>
-                                </li>
-                                <!-- /.timeline-label -->
-                                <!-- timeline item -->
-                                <li>
-                                    <i class="fa fa-camera bg-purple"></i>
-                                    <div class="timeline-item">
-                                        <span class="time"><i class="fa fa-clock-o"></i> 2 days ago</span>
-                                        <h3 class="timeline-header"><a href="#">Mina Lee</a> uploaded new photos</h3>
-                                        <div class="timeline-body">
-                                            <img src="http://placehold.it/150x100" alt="..." class='margin' />
-                                            <img src="http://placehold.it/150x100" alt="..." class='margin'/>
-                                            <img src="http://placehold.it/150x100" alt="..." class='margin'/>
-                                            <img src="http://placehold.it/150x100" alt="..." class='margin'/>
-                                        </div>
-                                    </div>
-                                </li>
-                                <!-- END timeline item -->
-                                <!-- timeline item -->
-                                <li>
-                                    <i class="fa fa-video-camera bg-maroon"></i>
-                                    <div class="timeline-item">
-                                        <span class="time"><i class="fa fa-clock-o"></i> 5 days ago</span>
-                                        <h3 class="timeline-header"><a href="#">Mr. Doe</a> shared a video</h3>
-                                        <div class="timeline-body">
-                                            <iframe width="300" height="169" src="//www.youtube.com/embed/fLe_qO4AE-M" frameborder="0" allowfullscreen></iframe>
-                                        </div>
-                                        <div class="timeline-footer">
-                                            <a href="#" class="btn btn-xs bg-maroon">See comments</a>
-                                        </div>
-                                    </div>
-                                </li>
-                                <!-- END timeline item -->
-                                <li>
-                                    <i class="fa fa-clock-o"></i>
-                                </li>
-                            </ul>
+                <section class="content invoice">                    
+                    <!-- title row -->
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <h2 class="page-header">
+                                <i class="fa fa-globe"></i> AdminLTE, Inc.
+                                <small class="pull-right">Date: 2/10/2014</small>
+                            </h2>                            
+                        </div><!-- /.col -->
+                    </div>
+                    <!-- info row -->
+                    <div class="row invoice-info">
+                        <div class="col-sm-4 invoice-col">
+                            From
+                            <address>
+                                <strong>Admin, Inc.</strong><br>
+                                795 Folsom Ave, Suite 600<br>
+                                San Francisco, CA 94107<br>
+                                Phone: (804) 123-5432<br/>
+                                Email: info@almasaeedstudio.com
+                            </address>
+                        </div><!-- /.col -->
+                        <div class="col-sm-4 invoice-col">
+                            To
+                            <address>
+                                <strong>John Doe</strong><br>
+                                795 Folsom Ave, Suite 600<br>
+                                San Francisco, CA 94107<br>
+                                Phone: (555) 539-1037<br/>
+                                Email: john.doe@example.com
+                            </address>
+                        </div><!-- /.col -->
+                        <div class="col-sm-4 invoice-col">
+                            <b>Invoice #007612</b><br/>
+                            <br/>
+                            <b>Order ID:</b> 4F3S8J<br/>
+                            <b>Payment Due:</b> 2/22/2014<br/>
+                            <b>Account:</b> 968-34567
                         </div><!-- /.col -->
                     </div><!-- /.row -->
 
-                    <div class="row" style="margin-top: 10px;">
-                        <div class="col-md-12">
-                            <div class="box box-primary">
-                                <div class="box-header">
-                                    <h3 class="box-title"><i class="fa fa-code"></i> Timeline Markup</h3>
-                                </div>
-                                <div class="box-body">
-                                    <pre style="font-weight: 600;">
-&amp;lt;ul class="timeline">
-
-    &amp;lt;!-- timeline time label -->
-    &amp;lt;li class="time-label">
-        &amp;lt;span class="bg-red">
-            10 Feb. 2014
-        &amp;lt;/span>
-    &amp;lt;/li>
-    &amp;lt;!-- /.timeline-label -->
-
-    &amp;lt;!-- timeline item -->
-    &amp;lt;li>
-        &amp;lt;!-- timeline icon -->
-        &amp;lt;i class="fa fa-envelope bg-blue">&amp;lt;/i>
-        &amp;lt;div class="timeline-item">
-            &amp;lt;span class="time">&amp;lt;i class="fa fa-clock-o">&amp;lt;/i> 12:05&amp;lt;/span>
-
-            &amp;lt;h3 class="timeline-header">&amp;lt;a href="#">Support Team&amp;lt;/a> ...&amp;lt;/h3>
-
-            &amp;lt;div class="timeline-body">
-                ...
-                Content goes here
-            &amp;lt;/div>
-
-            &amp;lt;div class='timeline-footer'>
-                &amp;lt;a class="btn btn-primary btn-xs">...&amp;lt;/a>
-            &amp;lt;/div>
-        &amp;lt;/div>
-    &amp;lt;/li>
-    &amp;lt;!-- END timeline item -->
-
-    ...
-
-&amp;lt;/ul>
-                                    </pre>                                    
-                                </div><!-- /.box-body -->
-                            </div><!-- /.box -->
+                    <!-- Table row -->
+                    <div class="row">
+                        <div class="col-xs-12 table-responsive">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Qty</th>
+                                        <th>Product</th>
+                                        <th>Serial #</th>
+                                        <th>Description</th>
+                                        <th>Subtotal</th>
+                                    </tr>                                    
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Call of Duty</td>
+                                        <td>455-981-221</td>
+                                        <td>El snort testosterone trophy driving gloves handsome</td>
+                                        <td>$64.50</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Need for Speed IV</td>
+                                        <td>247-925-726</td>
+                                        <td>Wes Anderson umami biodiesel</td>
+                                        <td>$50.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Monsters DVD</td>
+                                        <td>735-845-642</td>
+                                        <td>Terry Richardson helvetica tousled street art master</td>
+                                        <td>$10.70</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Grown Ups Blue Ray</td>
+                                        <td>422-568-642</td>
+                                        <td>Tousled lomo letterpress</td>
+                                        <td>$25.99</td>
+                                    </tr>
+                                </tbody>
+                            </table>                            
                         </div><!-- /.col -->
                     </div><!-- /.row -->
 
+                    <div class="row">
+                        <!-- accepted payments column -->
+                        <div class="col-xs-6">
+                            <p class="lead">Payment Methods:</p>
+                            <img src="../../img/credit/visa.png" alt="Visa"/>
+                            <img src="../../img/credit/mastercard.png" alt="Mastercard"/>
+                            <img src="../../img/credit/american-express.png" alt="American Express"/>
+                            <img src="../../img/credit/paypal2.png" alt="Paypal"/>
+                            <p class="text-muted well well-sm no-shadow" style="margin-top: 10px;">
+                                Etsy doostang zoodles disqus groupon greplin oooj voxy zoodles, weebly ning heekya handango imeem plugg dopplr jibjab, movity jajah plickers sifteo edmodo ifttt zimbra.
+                            </p>
+                        </div><!-- /.col -->
+                        <div class="col-xs-6">
+                            <p class="lead">Amount Due 2/22/2014</p>
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <tr>
+                                        <th style="width:50%">Subtotal:</th>
+                                        <td>$250.30</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Tax (9.3%)</th>
+                                        <td>$10.34</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Shipping:</th>
+                                        <td>$5.80</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Total:</th>
+                                        <td>$265.24</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div><!-- /.col -->
+                    </div><!-- /.row -->
+
+                    <!-- this row will not appear when printing -->
+                    <div class="row no-print">
+                        <div class="col-xs-12">
+                            <button class="btn btn-default" onclick="window.print();"><i class="fa fa-print"></i> Print</button>
+                            <button class="btn btn-success pull-right"><i class="fa fa-credit-card"></i> Submit Payment</button>  
+                            <button class="btn btn-primary pull-right" style="margin-right: 5px;"><i class="fa fa-download"></i> Generate PDF</button>
+                        </div>
+                    </div>
                 </section><!-- /.content -->
             </aside><!-- /.right-side -->
         </div><!-- ./wrapper -->
+
 
         <!-- jQuery 2.0.2 -->
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>

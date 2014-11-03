@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>AdminLTE | Timeline</title>
+        <title>AdminLTE | Dashboard</title>
         <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
         <!-- bootstrap 3.0.2 -->
         <link href="../../css/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -10,9 +10,11 @@
         <link href="../../css/font-awesome.min.css" rel="stylesheet" type="text/css" />
         <!-- Ionicons -->
         <link href="../../css/ionicons.min.css" rel="stylesheet" type="text/css" />
+        <!-- jQuery UI -->
+        <link href="../../css/jQueryUI/jquery-ui-1.10.3.custom.css" rel="stylesheet" type="text/css" />
         <!-- Theme style -->
         <link href="../../css/AdminLTE.css" rel="stylesheet" type="text/css" />
-
+        
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
@@ -23,7 +25,7 @@
     <body class="skin-blue">
         <!-- header logo: style can be found in header.less -->
         <header class="header">
-            <a href="../../index.html" class="logo">
+            <a href="../../index.php" class="logo">
                 <!-- Add the class icon to your logo image or logo icon to add the margining -->
                 AdminLTE
             </a>
@@ -270,7 +272,7 @@
         </header>
         <div class="wrapper row-offcanvas row-offcanvas-left">
             <!-- Left side column. contains the logo and sidebar -->
-            <aside class="left-side sidebar-offcanvas">
+            <aside class="left-side sidebar-offcanvas">                
                 <!-- sidebar: style can be found in sidebar.less -->
                 <section class="sidebar">
                     <!-- Sidebar user panel -->
@@ -296,13 +298,13 @@
                     <!-- /.search form -->
                     <!-- sidebar menu: : style can be found in sidebar.less -->
                     <ul class="sidebar-menu">
-                        <li>
-                            <a href="../../index.html">
+                        <li class="active">
+                            <a href="../../index.php">
                                 <i class="fa fa-dashboard"></i> <span>Dashboard</span>
                             </a>
                         </li>
                         <li>
-                            <a href="../widgets.html">
+                            <a href="../widgets.php">
                                 <i class="fa fa-th"></i> <span>Widgets</span> <small class="badge pull-right bg-green">new</small>
                             </a>
                         </li>
@@ -313,23 +315,24 @@
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="../charts/morris.html"><i class="fa fa-angle-double-right"></i> Morris</a></li>
-                                <li><a href="../charts/flot.html"><i class="fa fa-angle-double-right"></i> Flot</a></li>
-                                <li><a href="../charts/inline.html"><i class="fa fa-angle-double-right"></i> Inline charts</a></li>
+                                <li><a href="../charts/morris.php"><i class="fa fa-angle-double-right"></i> Morris</a></li>
+                                <li><a href="../charts/flot.php"><i class="fa fa-angle-double-right"></i> Flot</a></li>
+                                <li><a href="../charts/inline.php"><i class="fa fa-angle-double-right"></i> Inline charts</a></li>
                             </ul>
                         </li>
-                        <li class="treeview active">
+                        <li class="treeview">
                             <a href="#">
                                 <i class="fa fa-laptop"></i>
                                 <span>UI Elements</span>
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="general.html"><i class="fa fa-angle-double-right"></i> General</a></li>
-                                <li><a href="icons.html"><i class="fa fa-angle-double-right"></i> Icons</a></li>
-                                <li><a href="buttons.html"><i class="fa fa-angle-double-right"></i> Buttons</a></li>
-                                <li><a href="sliders.html"><i class="fa fa-angle-double-right"></i> Sliders</a></li>
-                                <li class="active"><a href="timeline.html"><i class="fa fa-angle-double-right"></i> Timeline</a></li>
+                                <li><a href="general.php"><i class="fa fa-angle-double-right"></i> General</a></li>
+                                <li><a href="icons.php"><i class="fa fa-angle-double-right"></i> Icons</a></li>
+                                <li><a href="buttons.php"><i class="fa fa-angle-double-right"></i> Buttons</a></li>
+                                <li><a href="sliders.php"><i class="fa fa-angle-double-right"></i> Sliders</a></li>
+                                <li><a href="timeline.php"><i class="fa fa-angle-double-right"></i> Timeline</a></li>
+                                <li><a href="jQuery-ui.php"><i class="fa fa-angle-double-right"></i> jQuery UI</a></li>
                             </ul>
                         </li>
                         <li class="treeview">
@@ -338,9 +341,9 @@
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="../forms/general.html"><i class="fa fa-angle-double-right"></i> General Elements</a></li>
-                                <li><a href="../forms/advanced.html"><i class="fa fa-angle-double-right"></i> Advanced Elements</a></li>
-                                <li><a href="../forms/editors.html"><i class="fa fa-angle-double-right"></i> Editors</a></li>
+                                <li><a href="../forms/general.php"><i class="fa fa-angle-double-right"></i> General Elements</a></li>
+                                <li><a href="../forms/advanced.php"><i class="fa fa-angle-double-right"></i> Advanced Elements</a></li>
+                                <li><a href="../forms/editors.php"><i class="fa fa-angle-double-right"></i> Editors</a></li>                                
                             </ul>
                         </li>
                         <li class="treeview">
@@ -349,20 +352,14 @@
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="../tables/simple.html"><i class="fa fa-angle-double-right"></i> Simple tables</a></li>
-                                <li><a href="../tables/data.html"><i class="fa fa-angle-double-right"></i> Data tables</a></li>
+                                <li><a href="../tables/simple.php"><i class="fa fa-angle-double-right"></i> Simple tables</a></li>
+                                <li><a href="../tables/data.php"><i class="fa fa-angle-double-right"></i> Data tables</a></li>
                             </ul>
                         </li>
                         <li>
-                            <a href="../calendar.html">
+                            <a href="../calendar.php">
                                 <i class="fa fa-calendar"></i> <span>Calendar</span>
                                 <small class="badge pull-right bg-red">3</small>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="../mailbox.html">
-                                <i class="fa fa-envelope"></i> <span>Mailbox</span>
-                                <small class="badge pull-right bg-yellow">12</small>
                             </a>
                         </li>
                         <li class="treeview">
@@ -371,13 +368,13 @@
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="../examples/invoice.html"><i class="fa fa-angle-double-right"></i> Invoice</a></li>
-                                <li><a href="../examples/login.html"><i class="fa fa-angle-double-right"></i> Login</a></li>
-                                <li><a href="../examples/register.html"><i class="fa fa-angle-double-right"></i> Register</a></li>
-                                <li><a href="../examples/lockscreen.html"><i class="fa fa-angle-double-right"></i> Lockscreen</a></li>
-                                <li><a href="../examples/404.html"><i class="fa fa-angle-double-right"></i> 404 Error</a></li>
-                                <li><a href="../examples/500.html"><i class="fa fa-angle-double-right"></i> 500 Error</a></li>
-                                <li><a href="../examples/blank.html"><i class="fa fa-angle-double-right"></i> Blank Page</a></li>
+                                <li><a href="../examples/invoice.php"><i class="fa fa-angle-double-right"></i> Invoice</a></li>
+                                <li><a href="../examples/login.php"><i class="fa fa-angle-double-right"></i> Login</a></li>
+                                <li><a href="../examples/register.php"><i class="fa fa-angle-double-right"></i> Register</a></li>
+                                <li><a href="../examples/lockscreen.php"><i class="fa fa-angle-double-right"></i> Lockscreen</a></li>
+                                <li><a href="../examples/404.php"><i class="fa fa-angle-double-right"></i> 404 Error</a></li>
+                                <li><a href="../examples/500.php"><i class="fa fa-angle-double-right"></i> 500 Error</a></li>                                
+                                <li><a href="../examples/blank.php"><i class="fa fa-angle-double-right"></i> Blank Page</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -386,183 +383,163 @@
             </aside>
 
             <!-- Right side column. Contains the navbar and content of the page -->
-            <aside class="right-side">
+            <aside class="right-side">                
                 <!-- Content Header (Page header) -->
                 <section class="content-header">
                     <h1>
-                        Timeline
-                        <small>example</small>
+                        jQuery UI
+                        <small>Control panel</small>
                     </h1>
                     <ol class="breadcrumb">
                         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-                        <li><a href="#">UI</a></li>
-                        <li class="active">Timeline</li>
+                        <li class="active">Blank page</li>
                     </ol>
                 </section>
 
                 <!-- Main content -->
                 <section class="content">
-
-                    <!-- row -->
-                    <div class="row">                        
-                        <div class="col-md-12">
-                            <!-- The time line -->
-                            <ul class="timeline">
-                                <!-- timeline time label -->
-                                <li class="time-label">
-                                    <span class="bg-red">
-                                        10 Feb. 2014
-                                    </span>
-                                </li>
-                                <!-- /.timeline-label -->
-                                <!-- timeline item -->
-                                <li>
-                                    <i class="fa fa-envelope bg-blue"></i>
-                                    <div class="timeline-item">
-                                        <span class="time"><i class="fa fa-clock-o"></i> 12:05</span>
-                                        <h3 class="timeline-header"><a href="#">Support Team</a> sent you and email</h3>
-                                        <div class="timeline-body">
-                                            Etsy doostang zoodles disqus groupon greplin oooj voxy zoodles,
-                                            weebly ning heekya handango imeem plugg dopplr jibjab, movity
-                                            jajah plickers sifteo edmodo ifttt zimbra. Babblely odeo kaboodle
-                                            quora plaxo ideeli hulu weebly balihoo...
+                    <div class='row'>
+                        <div class='col-md-6'>
+                            <div class='box box-primary'>
+                                <div class='box-header'>
+                                    <h3 class='box-title'>Accordion</h3>
+                                </div>
+                                <div class='box-body pad'>
+                                    <div id="accordion">
+                                        <h3>Section 1</h3>
+                                        <div>
+                                            <p>
+                                                Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
+                                                ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
+                                                amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut
+                                                odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
+                                            </p>
                                         </div>
-                                        <div class='timeline-footer'>
-                                            <a class="btn btn-primary btn-xs">Read more</a>
-                                            <a class="btn btn-danger btn-xs">Delete</a>
+                                        <h3>Section 2</h3>
+                                        <div>
+                                            <p>
+                                                Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
+                                                purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
+                                                velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
+                                                suscipit faucibus urna.
+                                            </p>
                                         </div>
-                                    </div>
-                                </li>
-                                <!-- END timeline item -->
-                                <!-- timeline item -->
-                                <li>
-                                    <i class="fa fa-user bg-aqua"></i>
-                                    <div class="timeline-item">
-                                        <span class="time"><i class="fa fa-clock-o"></i> 5 mins ago</span>
-                                        <h3 class="timeline-header no-border"><a href="#">Sarah Young</a> accepted your friend request</h3>
-                                    </div>
-                                </li>
-                                <!-- END timeline item -->
-                                <!-- timeline item -->
-                                <li>
-                                    <i class="fa fa-comments bg-yellow"></i>
-                                    <div class="timeline-item">
-                                        <span class="time"><i class="fa fa-clock-o"></i> 27 mins ago</span>
-                                        <h3 class="timeline-header"><a href="#">Jay White</a> commented on your post</h3>
-                                        <div class="timeline-body">
-                                            Take me to your leader!
-                                            Switzerland is small and neutral!
-                                            We are more like Germany, ambitious and misunderstood!
+                                        <h3>Section 3</h3>
+                                        <div>
+                                            <p>
+                                                Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.
+                                                Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero
+                                                ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis
+                                                lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui.
+                                            </p>
+                                            <ul>
+                                                <li>List item one</li>
+                                                <li>List item two</li>
+                                                <li>List item three</li>
+                                            </ul>
                                         </div>
-                                        <div class='timeline-footer'>
-                                            <a class="btn btn-warning btn-flat btn-xs">View comment</a>
-                                        </div>
-                                    </div>
-                                </li>
-                                <!-- END timeline item -->
-                                <!-- timeline time label -->
-                                <li class="time-label">
-                                    <span class="bg-green">
-                                        3 Jan. 2014
-                                    </span>
-                                </li>
-                                <!-- /.timeline-label -->
-                                <!-- timeline item -->
-                                <li>
-                                    <i class="fa fa-camera bg-purple"></i>
-                                    <div class="timeline-item">
-                                        <span class="time"><i class="fa fa-clock-o"></i> 2 days ago</span>
-                                        <h3 class="timeline-header"><a href="#">Mina Lee</a> uploaded new photos</h3>
-                                        <div class="timeline-body">
-                                            <img src="http://placehold.it/150x100" alt="..." class='margin' />
-                                            <img src="http://placehold.it/150x100" alt="..." class='margin'/>
-                                            <img src="http://placehold.it/150x100" alt="..." class='margin'/>
-                                            <img src="http://placehold.it/150x100" alt="..." class='margin'/>
+                                        <h3>Section 4</h3>
+                                        <div>
+                                            <p>
+                                                Cras dictum. Pellentesque habitant morbi tristique senectus et netus
+                                                et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in
+                                                faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia
+                                                mauris vel est.
+                                            </p>
+                                            <p>
+                                                Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus.
+                                                Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+                                                inceptos himenaeos.
+                                            </p>
                                         </div>
                                     </div>
-                                </li>
-                                <!-- END timeline item -->
-                                <!-- timeline item -->
-                                <li>
-                                    <i class="fa fa-video-camera bg-maroon"></i>
-                                    <div class="timeline-item">
-                                        <span class="time"><i class="fa fa-clock-o"></i> 5 days ago</span>
-                                        <h3 class="timeline-header"><a href="#">Mr. Doe</a> shared a video</h3>
-                                        <div class="timeline-body">
-                                            <iframe width="300" height="169" src="//www.youtube.com/embed/fLe_qO4AE-M" frameborder="0" allowfullscreen></iframe>
-                                        </div>
-                                        <div class="timeline-footer">
-                                            <a href="#" class="btn btn-xs bg-maroon">See comments</a>
-                                        </div>
-                                    </div>
-                                </li>
-                                <!-- END timeline item -->
-                                <li>
-                                    <i class="fa fa-clock-o"></i>
-                                </li>
-                            </ul>
-                        </div><!-- /.col -->
-                    </div><!-- /.row -->
-
-                    <div class="row" style="margin-top: 10px;">
-                        <div class="col-md-12">
-                            <div class="box box-primary">
-                                <div class="box-header">
-                                    <h3 class="box-title"><i class="fa fa-code"></i> Timeline Markup</h3>
+                                </div>
+                            </div><!-- /.box accordion -->
+                        </div><!-- /.col left -->
+                        <!-- Right column -->
+                        <div class='col-md-6'>
+                            <div class='box box-danger'>
+                                <div class='box-header'>
+                                    <h3 class='box-title'>Date Picker</h3>
                                 </div>
                                 <div class="box-body">
-                                    <pre style="font-weight: 600;">
-&amp;lt;ul class="timeline">
+                                    <p>Date: <input type="text" id="datepicker"></p>
+                                    <p>Date range:</p>
+                                    <label for="from">From</label>
+                                    <input type="text" id="from" name="from">
+                                    <label for="to">to</label>
+                                    <input type="text" id="to" name="to">
+                                </div>                                
+                            </div>
+                            <div class='box box-info'>
+                                <div class='box-header'>
+                                    <h3 class='box-title'>Dialog</h3>                                    
+                                </div>
+                                <div class='box-body'>
+                                    <div id="dialog" title="Basic dialog">
+                                        <p>This is an animated dialog which is useful for displaying information. The dialog window can be moved, resized and closed with the 'x' icon.</p>
+                                    </div>
 
-    &amp;lt;!-- timeline time label -->
-    &amp;lt;li class="time-label">
-        &amp;lt;span class="bg-red">
-            10 Feb. 2014
-        &amp;lt;/span>
-    &amp;lt;/li>
-    &amp;lt;!-- /.timeline-label -->
-
-    &amp;lt;!-- timeline item -->
-    &amp;lt;li>
-        &amp;lt;!-- timeline icon -->
-        &amp;lt;i class="fa fa-envelope bg-blue">&amp;lt;/i>
-        &amp;lt;div class="timeline-item">
-            &amp;lt;span class="time">&amp;lt;i class="fa fa-clock-o">&amp;lt;/i> 12:05&amp;lt;/span>
-
-            &amp;lt;h3 class="timeline-header">&amp;lt;a href="#">Support Team&amp;lt;/a> ...&amp;lt;/h3>
-
-            &amp;lt;div class="timeline-body">
-                ...
-                Content goes here
-            &amp;lt;/div>
-
-            &amp;lt;div class='timeline-footer'>
-                &amp;lt;a class="btn btn-primary btn-xs">...&amp;lt;/a>
-            &amp;lt;/div>
-        &amp;lt;/div>
-    &amp;lt;/li>
-    &amp;lt;!-- END timeline item -->
-
-    ...
-
-&amp;lt;/ul>
-                                    </pre>                                    
-                                </div><!-- /.box-body -->
-                            </div><!-- /.box -->
-                        </div><!-- /.col -->
+                                    <button id="opener">Open Dialog</button>
+                                </div>
+                            </div>
+                        </div><!-- /.col right -->
                     </div><!-- /.row -->
 
                 </section><!-- /.content -->
             </aside><!-- /.right-side -->
         </div><!-- ./wrapper -->
 
+
         <!-- jQuery 2.0.2 -->
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+        <!-- jquery ui 1.10.3 -->        
+        <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+
         <!-- Bootstrap -->
         <script src="../../js/bootstrap.min.js" type="text/javascript"></script>
         <!-- AdminLTE App -->
         <script src="../../js/AdminLTE/app.js" type="text/javascript"></script>
         <!-- AdminLTE for demo purposes -->
         <script src="js/AdminLTE/demo.js" type="text/javascript"></script>
+        <script>
+            $(function() {
+                $("#accordion").accordion();
+                $("#buttons > button").button();
+                $("#datepicker").datepicker();
+                $("#from").datepicker({
+                    defaultDate: "+1w",
+                    changeMonth: true,
+                    numberOfMonths: 3,
+                    onClose: function(selectedDate) {
+                        $("#to").datepicker("option", "minDate", selectedDate);
+                    }
+                });
+                $("#to").datepicker({
+                    defaultDate: "+1w",
+                    changeMonth: true,
+                    numberOfMonths: 3,
+                    onClose: function(selectedDate) {
+                        $("#from").datepicker("option", "maxDate", selectedDate);
+                    }
+                });
+                $("#dialog").dialog({
+                    autoOpen: false,
+                    show: {
+                        effect: "blind",
+                        duration: 1000
+                    },
+                    hide: {
+                        effect: "explode",
+                        duration: 1000
+                    }
+                });
+
+                $("#opener").click(function() {
+                    $("#dialog").dialog("open");
+                });
+            });
+        </script>
+
     </body>
 </html>

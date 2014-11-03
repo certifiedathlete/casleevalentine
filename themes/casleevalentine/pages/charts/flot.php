@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>AdminLTE | Timeline</title>
+        <title>AdminLTE | Flot Charts</title>
         <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
         <!-- bootstrap 3.0.2 -->
         <link href="../../css/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -23,7 +23,7 @@
     <body class="skin-blue">
         <!-- header logo: style can be found in header.less -->
         <header class="header">
-            <a href="../../index.html" class="logo">
+            <a href="../../index.php" class="logo">
                 <!-- Add the class icon to your logo image or logo icon to add the margining -->
                 AdminLTE
             </a>
@@ -297,39 +297,39 @@
                     <!-- sidebar menu: : style can be found in sidebar.less -->
                     <ul class="sidebar-menu">
                         <li>
-                            <a href="../../index.html">
+                            <a href="../../index.php">
                                 <i class="fa fa-dashboard"></i> <span>Dashboard</span>
                             </a>
                         </li>
                         <li>
-                            <a href="../widgets.html">
+                            <a href="../widgets.php">
                                 <i class="fa fa-th"></i> <span>Widgets</span> <small class="badge pull-right bg-green">new</small>
                             </a>
                         </li>
-                        <li class="treeview">
+                        <li class="treeview active">
                             <a href="#">
                                 <i class="fa fa-bar-chart-o"></i>
                                 <span>Charts</span>
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="../charts/morris.html"><i class="fa fa-angle-double-right"></i> Morris</a></li>
-                                <li><a href="../charts/flot.html"><i class="fa fa-angle-double-right"></i> Flot</a></li>
-                                <li><a href="../charts/inline.html"><i class="fa fa-angle-double-right"></i> Inline charts</a></li>
+                                <li><a href="morris.php"><i class="fa fa-angle-double-right"></i> Morris</a></li>
+                                <li class="active"><a href="flot.php"><i class="fa fa-angle-double-right"></i> Flot</a></li>
+                                <li><a href="inline.php"><i class="fa fa-angle-double-right"></i> Inline charts</a></li>
                             </ul>
                         </li>
-                        <li class="treeview active">
+                        <li class="treeview">
                             <a href="#">
                                 <i class="fa fa-laptop"></i>
                                 <span>UI Elements</span>
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="general.html"><i class="fa fa-angle-double-right"></i> General</a></li>
-                                <li><a href="icons.html"><i class="fa fa-angle-double-right"></i> Icons</a></li>
-                                <li><a href="buttons.html"><i class="fa fa-angle-double-right"></i> Buttons</a></li>
-                                <li><a href="sliders.html"><i class="fa fa-angle-double-right"></i> Sliders</a></li>
-                                <li class="active"><a href="timeline.html"><i class="fa fa-angle-double-right"></i> Timeline</a></li>
+                                <li><a href="../UI/general.php"><i class="fa fa-angle-double-right"></i> General</a></li>
+                                <li><a href="../UI/icons.php"><i class="fa fa-angle-double-right"></i> Icons</a></li>
+                                <li><a href="../UI/buttons.php"><i class="fa fa-angle-double-right"></i> Buttons</a></li>
+                                <li><a href="../UI/sliders.php"><i class="fa fa-angle-double-right"></i> Sliders</a></li>
+                                <li><a href="../UI/timeline.php"><i class="fa fa-angle-double-right"></i> Timeline</a></li>
                             </ul>
                         </li>
                         <li class="treeview">
@@ -338,9 +338,9 @@
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="../forms/general.html"><i class="fa fa-angle-double-right"></i> General Elements</a></li>
-                                <li><a href="../forms/advanced.html"><i class="fa fa-angle-double-right"></i> Advanced Elements</a></li>
-                                <li><a href="../forms/editors.html"><i class="fa fa-angle-double-right"></i> Editors</a></li>
+                                <li><a href="../forms/general.php"><i class="fa fa-angle-double-right"></i> General Elements</a></li>
+                                <li><a href="../forms/advanced.php"><i class="fa fa-angle-double-right"></i> Advanced Elements</a></li>
+                                <li><a href="../forms/editors.php"><i class="fa fa-angle-double-right"></i> Editors</a></li>
                             </ul>
                         </li>
                         <li class="treeview">
@@ -349,18 +349,18 @@
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="../tables/simple.html"><i class="fa fa-angle-double-right"></i> Simple tables</a></li>
-                                <li><a href="../tables/data.html"><i class="fa fa-angle-double-right"></i> Data tables</a></li>
+                                <li><a href="../tables/simple.php"><i class="fa fa-angle-double-right"></i> Simple tables</a></li>
+                                <li><a href="../tables/data.php"><i class="fa fa-angle-double-right"></i> Data tables</a></li>
                             </ul>
                         </li>
                         <li>
-                            <a href="../calendar.html">
+                            <a href="../calendar.php">
                                 <i class="fa fa-calendar"></i> <span>Calendar</span>
                                 <small class="badge pull-right bg-red">3</small>
                             </a>
                         </li>
                         <li>
-                            <a href="../mailbox.html">
+                            <a href="../mailbox.php">
                                 <i class="fa fa-envelope"></i> <span>Mailbox</span>
                                 <small class="badge pull-right bg-yellow">12</small>
                             </a>
@@ -371,13 +371,13 @@
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="../examples/invoice.html"><i class="fa fa-angle-double-right"></i> Invoice</a></li>
-                                <li><a href="../examples/login.html"><i class="fa fa-angle-double-right"></i> Login</a></li>
-                                <li><a href="../examples/register.html"><i class="fa fa-angle-double-right"></i> Register</a></li>
-                                <li><a href="../examples/lockscreen.html"><i class="fa fa-angle-double-right"></i> Lockscreen</a></li>
-                                <li><a href="../examples/404.html"><i class="fa fa-angle-double-right"></i> 404 Error</a></li>
-                                <li><a href="../examples/500.html"><i class="fa fa-angle-double-right"></i> 500 Error</a></li>
-                                <li><a href="../examples/blank.html"><i class="fa fa-angle-double-right"></i> Blank Page</a></li>
+                                <li><a href="../examples/invoice.php"><i class="fa fa-angle-double-right"></i> Invoice</a></li>
+                                <li><a href="../examples/login.php"><i class="fa fa-angle-double-right"></i> Login</a></li>
+                                <li><a href="../examples/register.php"><i class="fa fa-angle-double-right"></i> Register</a></li>
+                                <li><a href="../examples/lockscreen.php"><i class="fa fa-angle-double-right"></i> Lockscreen</a></li>
+                                <li><a href="../examples/404.php"><i class="fa fa-angle-double-right"></i> 404 Error</a></li>
+                                <li><a href="../examples/500.php"><i class="fa fa-angle-double-right"></i> 500 Error</a></li>
+                                <li><a href="../examples/blank.php"><i class="fa fa-angle-double-right"></i> Blank Page</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -390,171 +390,95 @@
                 <!-- Content Header (Page header) -->
                 <section class="content-header">
                     <h1>
-                        Timeline
-                        <small>example</small>
+                        Flot Charts
+                        <small>preview sample</small>
                     </h1>
                     <ol class="breadcrumb">
                         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-                        <li><a href="#">UI</a></li>
-                        <li class="active">Timeline</li>
+                        <li class="active">Blank page</li>
                     </ol>
                 </section>
 
                 <!-- Main content -->
                 <section class="content">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <!-- interactive chart -->
+                            <div class="box box-primary">
+                                <div class="box-header">
+                                    <i class="fa fa-bar-chart-o"></i>
+                                    <h3 class="box-title">Interactive Area Chart</h3>
+                                    <div class="box-tools pull-right">
+                                        Real time
+                                        <div class="btn-group" id="realtime" data-toggle="btn-toggle">
+                                            <button type="button" class="btn btn-default btn-xs active" data-toggle="on">On</button>                                            
+                                            <button type="button" class="btn btn-default btn-xs" data-toggle="off">Off</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="box-body">
+                                    <div id="interactive" style="height: 300px;"></div>
+                                </div><!-- /.box-body-->
+                            </div><!-- /.box -->
 
-                    <!-- row -->
-                    <div class="row">                        
-                        <div class="col-md-12">
-                            <!-- The time line -->
-                            <ul class="timeline">
-                                <!-- timeline time label -->
-                                <li class="time-label">
-                                    <span class="bg-red">
-                                        10 Feb. 2014
-                                    </span>
-                                </li>
-                                <!-- /.timeline-label -->
-                                <!-- timeline item -->
-                                <li>
-                                    <i class="fa fa-envelope bg-blue"></i>
-                                    <div class="timeline-item">
-                                        <span class="time"><i class="fa fa-clock-o"></i> 12:05</span>
-                                        <h3 class="timeline-header"><a href="#">Support Team</a> sent you and email</h3>
-                                        <div class="timeline-body">
-                                            Etsy doostang zoodles disqus groupon greplin oooj voxy zoodles,
-                                            weebly ning heekya handango imeem plugg dopplr jibjab, movity
-                                            jajah plickers sifteo edmodo ifttt zimbra. Babblely odeo kaboodle
-                                            quora plaxo ideeli hulu weebly balihoo...
-                                        </div>
-                                        <div class='timeline-footer'>
-                                            <a class="btn btn-primary btn-xs">Read more</a>
-                                            <a class="btn btn-danger btn-xs">Delete</a>
-                                        </div>
-                                    </div>
-                                </li>
-                                <!-- END timeline item -->
-                                <!-- timeline item -->
-                                <li>
-                                    <i class="fa fa-user bg-aqua"></i>
-                                    <div class="timeline-item">
-                                        <span class="time"><i class="fa fa-clock-o"></i> 5 mins ago</span>
-                                        <h3 class="timeline-header no-border"><a href="#">Sarah Young</a> accepted your friend request</h3>
-                                    </div>
-                                </li>
-                                <!-- END timeline item -->
-                                <!-- timeline item -->
-                                <li>
-                                    <i class="fa fa-comments bg-yellow"></i>
-                                    <div class="timeline-item">
-                                        <span class="time"><i class="fa fa-clock-o"></i> 27 mins ago</span>
-                                        <h3 class="timeline-header"><a href="#">Jay White</a> commented on your post</h3>
-                                        <div class="timeline-body">
-                                            Take me to your leader!
-                                            Switzerland is small and neutral!
-                                            We are more like Germany, ambitious and misunderstood!
-                                        </div>
-                                        <div class='timeline-footer'>
-                                            <a class="btn btn-warning btn-flat btn-xs">View comment</a>
-                                        </div>
-                                    </div>
-                                </li>
-                                <!-- END timeline item -->
-                                <!-- timeline time label -->
-                                <li class="time-label">
-                                    <span class="bg-green">
-                                        3 Jan. 2014
-                                    </span>
-                                </li>
-                                <!-- /.timeline-label -->
-                                <!-- timeline item -->
-                                <li>
-                                    <i class="fa fa-camera bg-purple"></i>
-                                    <div class="timeline-item">
-                                        <span class="time"><i class="fa fa-clock-o"></i> 2 days ago</span>
-                                        <h3 class="timeline-header"><a href="#">Mina Lee</a> uploaded new photos</h3>
-                                        <div class="timeline-body">
-                                            <img src="http://placehold.it/150x100" alt="..." class='margin' />
-                                            <img src="http://placehold.it/150x100" alt="..." class='margin'/>
-                                            <img src="http://placehold.it/150x100" alt="..." class='margin'/>
-                                            <img src="http://placehold.it/150x100" alt="..." class='margin'/>
-                                        </div>
-                                    </div>
-                                </li>
-                                <!-- END timeline item -->
-                                <!-- timeline item -->
-                                <li>
-                                    <i class="fa fa-video-camera bg-maroon"></i>
-                                    <div class="timeline-item">
-                                        <span class="time"><i class="fa fa-clock-o"></i> 5 days ago</span>
-                                        <h3 class="timeline-header"><a href="#">Mr. Doe</a> shared a video</h3>
-                                        <div class="timeline-body">
-                                            <iframe width="300" height="169" src="//www.youtube.com/embed/fLe_qO4AE-M" frameborder="0" allowfullscreen></iframe>
-                                        </div>
-                                        <div class="timeline-footer">
-                                            <a href="#" class="btn btn-xs bg-maroon">See comments</a>
-                                        </div>
-                                    </div>
-                                </li>
-                                <!-- END timeline item -->
-                                <li>
-                                    <i class="fa fa-clock-o"></i>
-                                </li>
-                            </ul>
                         </div><!-- /.col -->
                     </div><!-- /.row -->
 
-                    <div class="row" style="margin-top: 10px;">
-                        <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <!-- Line chart -->
                             <div class="box box-primary">
                                 <div class="box-header">
-                                    <h3 class="box-title"><i class="fa fa-code"></i> Timeline Markup</h3>
+                                    <i class="fa fa-bar-chart-o"></i>
+                                    <h3 class="box-title">Line Chart</h3>
                                 </div>
                                 <div class="box-body">
-                                    <pre style="font-weight: 600;">
-&amp;lt;ul class="timeline">
+                                    <div id="line-chart" style="height: 300px;"></div>
+                                </div><!-- /.box-body-->
+                            </div><!-- /.box -->
 
-    &amp;lt;!-- timeline time label -->
-    &amp;lt;li class="time-label">
-        &amp;lt;span class="bg-red">
-            10 Feb. 2014
-        &amp;lt;/span>
-    &amp;lt;/li>
-    &amp;lt;!-- /.timeline-label -->
+                            <!-- Area chart -->
+                            <div class="box box-primary">
+                                <div class="box-header">
+                                    <i class="fa fa-bar-chart-o"></i>
+                                    <h3 class="box-title">Full Width Area Chart</h3>
+                                </div>
+                                <div class="box-body">
+                                    <div id="area-chart" style="height: 338px;" class="full-width-chart"></div>
+                                </div><!-- /.box-body-->
+                            </div><!-- /.box -->
 
-    &amp;lt;!-- timeline item -->
-    &amp;lt;li>
-        &amp;lt;!-- timeline icon -->
-        &amp;lt;i class="fa fa-envelope bg-blue">&amp;lt;/i>
-        &amp;lt;div class="timeline-item">
-            &amp;lt;span class="time">&amp;lt;i class="fa fa-clock-o">&amp;lt;/i> 12:05&amp;lt;/span>
+                        </div><!-- /.col -->
 
-            &amp;lt;h3 class="timeline-header">&amp;lt;a href="#">Support Team&amp;lt;/a> ...&amp;lt;/h3>
+                        <div class="col-md-6">
+                            <!-- Bar chart -->
+                            <div class="box box-primary">
+                                <div class="box-header">
+                                    <i class="fa fa-bar-chart-o"></i>
+                                    <h3 class="box-title">Bar Chart</h3>
+                                </div>
+                                <div class="box-body">
+                                    <div id="bar-chart" style="height: 300px;"></div>
+                                </div><!-- /.box-body-->
+                            </div><!-- /.box -->
 
-            &amp;lt;div class="timeline-body">
-                ...
-                Content goes here
-            &amp;lt;/div>
-
-            &amp;lt;div class='timeline-footer'>
-                &amp;lt;a class="btn btn-primary btn-xs">...&amp;lt;/a>
-            &amp;lt;/div>
-        &amp;lt;/div>
-    &amp;lt;/li>
-    &amp;lt;!-- END timeline item -->
-
-    ...
-
-&amp;lt;/ul>
-                                    </pre>                                    
-                                </div><!-- /.box-body -->
+                            <!-- Donut chart -->
+                            <div class="box box-primary">
+                                <div class="box-header">
+                                    <i class="fa fa-bar-chart-o"></i>
+                                    <h3 class="box-title">Donut Chart</h3>
+                                </div>
+                                <div class="box-body">
+                                    <div id="donut-chart" style="height: 300px;"></div>
+                                </div><!-- /.box-body-->
                             </div><!-- /.box -->
                         </div><!-- /.col -->
                     </div><!-- /.row -->
-
                 </section><!-- /.content -->
+
             </aside><!-- /.right-side -->
         </div><!-- ./wrapper -->
+
 
         <!-- jQuery 2.0.2 -->
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
@@ -564,5 +488,281 @@
         <script src="../../js/AdminLTE/app.js" type="text/javascript"></script>
         <!-- AdminLTE for demo purposes -->
         <script src="js/AdminLTE/demo.js" type="text/javascript"></script>
+        <!-- FLOT CHARTS -->
+        <script src="../../js/plugins/flot/jquery.flot.min.js" type="text/javascript"></script>
+        <!-- FLOT RESIZE PLUGIN - allows the chart to redraw when the window is resized -->
+        <script src="../../js/plugins/flot/jquery.flot.resize.min.js" type="text/javascript"></script>
+        <!-- FLOT PIE PLUGIN - also used to draw donut charts -->
+        <script src="../../js/plugins/flot/jquery.flot.pie.min.js" type="text/javascript"></script>
+        <!-- FLOT CATEGORIES PLUGIN - Used to draw bar charts -->
+        <script src="../../js/plugins/flot/jquery.flot.categories.min.js" type="text/javascript"></script>
+
+        <!-- Page script -->
+        <script type="text/javascript">
+
+            $(function() {
+
+                /*
+                 * Flot Interactive Chart
+                 * -----------------------
+                 */
+                // We use an inline data source in the example, usually data would
+                // be fetched from a server
+                var data = [], totalPoints = 100;
+                function getRandomData() {
+
+                    if (data.length > 0)
+                        data = data.slice(1);
+
+                    // Do a random walk
+                    while (data.length < totalPoints) {
+
+                        var prev = data.length > 0 ? data[data.length - 1] : 50,
+                                y = prev + Math.random() * 10 - 5;
+
+                        if (y < 0) {
+                            y = 0;
+                        } else if (y > 100) {
+                            y = 100;
+                        }
+
+                        data.push(y);
+                    }
+
+                    // Zip the generated y values with the x values
+                    var res = [];
+                    for (var i = 0; i < data.length; ++i) {
+                        res.push([i, data[i]]);
+                    }
+
+                    return res;
+                }
+
+                var interactive_plot = $.plot("#interactive", [getRandomData()], {
+                    grid: {
+                        borderColor: "#f3f3f3",
+                        borderWidth: 1,
+                        tickColor: "#f3f3f3"
+                    },
+                    series: {
+                        shadowSize: 0, // Drawing is faster without shadows
+                        color: "#3c8dbc"
+                    },
+                    lines: {
+                        fill: true, //Converts the line chart to area chart
+                        color: "#3c8dbc"
+                    },
+                    yaxis: {
+                        min: 0,
+                        max: 100,
+                        show: true
+                    },
+                    xaxis: {
+                        show: true
+                    }
+                });
+
+                var updateInterval = 500; //Fetch data ever x milliseconds
+                var realtime = "on"; //If == to on then fetch data every x seconds. else stop fetching
+                function update() {
+
+                    interactive_plot.setData([getRandomData()]);
+
+                    // Since the axes don't change, we don't need to call plot.setupGrid()
+                    interactive_plot.draw();
+                    if (realtime === "on")
+                        setTimeout(update, updateInterval);
+                }
+
+                //INITIALIZE REALTIME DATA FETCHING
+                if (realtime === "on") {
+                    update();
+                }
+                //REALTIME TOGGLE
+                $("#realtime .btn").click(function() {
+                    if ($(this).data("toggle") === "on") {
+                        realtime = "on";
+                    }
+                    else {
+                        realtime = "off";
+                    }
+                    update();
+                });
+                /*
+                 * END INTERACTIVE CHART
+                 */
+
+
+                /*
+                 * LINE CHART
+                 * ----------
+                 */
+                //LINE randomly generated data
+
+                var sin = [], cos = [];
+                for (var i = 0; i < 14; i += 0.5) {
+                    sin.push([i, Math.sin(i)]);
+                    cos.push([i, Math.cos(i)]);
+                }
+                var line_data1 = {
+                    data: sin,
+                    color: "#3c8dbc"
+                };
+                var line_data2 = {
+                    data: cos,
+                    color: "#00c0ef"
+                };
+                $.plot("#line-chart", [line_data1, line_data2], {
+                    grid: {
+                        hoverable: true,
+                        borderColor: "#f3f3f3",
+                        borderWidth: 1,
+                        tickColor: "#f3f3f3"
+                    },
+                    series: {
+                        shadowSize: 0,
+                        lines: {
+                            show: true
+                        },
+                        points: {
+                            show: true
+                        }
+                    },
+                    lines: {
+                        fill: false,
+                        color: ["#3c8dbc", "#f56954"]
+                    },
+                    yaxis: {
+                        show: true,
+                    },
+                    xaxis: {
+                        show: true
+                    }
+                });
+                //Initialize tooltip on hover
+                $("<div class='tooltip-inner' id='line-chart-tooltip'></div>").css({
+                    position: "absolute",
+                    display: "none",
+                    opacity: 0.8
+                }).appendTo("body");
+                $("#line-chart").bind("plothover", function(event, pos, item) {
+
+                    if (item) {
+                        var x = item.datapoint[0].toFixed(2),
+                                y = item.datapoint[1].toFixed(2);
+
+                        $("#line-chart-tooltip").php(item.series.label + " of " + x + " = " + y)
+                                .css({top: item.pageY + 5, left: item.pageX + 5})
+                                .fadeIn(200);
+                    } else {
+                        $("#line-chart-tooltip").hide();
+                    }
+
+                });
+                /* END LINE CHART */
+
+                /*
+                 * FULL WIDTH STATIC AREA CHART   
+                 * -----------------               
+                 */
+                var areaData = [[2, 88.0], [3, 93.3], [4, 102.0], [5, 108.5], [6, 115.7], [7, 115.6],
+                    [8, 124.6], [9, 130.3], [10, 134.3], [11, 141.4], [12, 146.5], [13, 151.7], [14, 159.9],
+                    [15, 165.4], [16, 167.8], [17, 168.7], [18, 169.5], [19, 168.0]];
+                $.plot("#area-chart", [areaData], {
+                    grid: {
+                        borderWidth: 0
+                    },
+                    series: {
+                        shadowSize: 0, // Drawing is faster without shadows
+                        color: "#00c0ef"
+                    },
+                    lines: {
+                        fill: true //Converts the line chart to area chart                        
+                    },
+                    yaxis: {
+                        show: false
+                    },
+                    xaxis: {
+                        show: false
+                    }
+                });
+
+                /* END AREA CHART */
+
+                /*
+                 * BAR CHART
+                 * ---------                 
+                 */
+
+                var bar_data = {
+                    data: [["January", 10], ["February", 8], ["March", 4], ["April", 13], ["May", 17], ["June", 9]],
+                    color: "#3c8dbc"
+                };
+                $.plot("#bar-chart", [bar_data], {
+                    grid: {
+                        borderWidth: 1,
+                        borderColor: "#f3f3f3",
+                        tickColor: "#f3f3f3"
+                    },
+                    series: {
+                        bars: {
+                            show: true,
+                            barWidth: 0.5,
+                            align: "center"
+                        }
+                    },
+                    xaxis: {
+                        mode: "categories",
+                        tickLength: 0
+                    }
+                });
+                /* END BAR CHART */
+
+                /*
+                 * DONUT CHART
+                 * -----------
+                 */
+
+                var donutData = [
+                    {label: "Series2", data: 30, color: "#3c8dbc"},
+                    {label: "Series3", data: 20, color: "#0073b7"},
+                    {label: "Series4", data: 50, color: "#00c0ef"}
+                ];
+                $.plot("#donut-chart", donutData, {
+                    series: {
+                        pie: {
+                            show: true,
+                            radius: 1,
+                            innerRadius: 0.5,
+                            label: {
+                                show: true,
+                                radius: 2 / 3,
+                                formatter: labelFormatter,
+                                threshold: 0.1
+                            }
+
+                        }
+                    },
+                    legend: {
+                        show: false
+                    }
+                });
+                /*
+                 * END DONUT CHART
+                 */
+
+            });
+
+            /*
+             * Custom Label formatter
+             * ----------------------
+             */
+            function labelFormatter(label, series) {
+                return "<div style='font-size:13px; text-align:center; padding:2px; color: #fff; font-weight: 600;'>"
+                        + label
+                        + "<br/>"
+                        + Math.round(series.percent) + "%</div>";
+            }
+        </script>
     </body>
 </html>
