@@ -4,25 +4,25 @@
  * Global Variables and Constants
  * 
  * **************************************** */
-if (!defined('CA_WP_URL')){
+if (!defined('CA_WP_URL')) {
     define('CA_WP_URL', get_bloginfo('wpurl'));
 }
-if (!defined('CA_THEME_DIR')){
+if (!defined('CA_THEME_DIR')) {
     define('CA_THEME_DIR', ABSPATH . 'wp-content/themes/' . get_template());
 }
-if (!defined('CA_PLUGIN_NAME')){
+if (!defined('CA_PLUGIN_NAME')) {
     define('CA_PLUGIN_NAME', trim(dirname(plugin_basename(__FILE__)), '/'));
 }
-if (!defined('CA_PLUGIN_DIR')){
+if (!defined('CA_PLUGIN_DIR')) {
     define('CA_PLUGIN_DIR', WP_PLUGIN_DIR . '/' . CA_PLUGIN_NAME);
 }
-if (!defined('CA_PLUGIN_URL')){
+if (!defined('CA_PLUGIN_URL')) {
     define('CA_PLUGIN_URL', WP_PLUGIN_URL . '/' . CA_PLUGIN_NAME);
 }
-if (!defined('CA_VERSION_KEY')){
+if (!defined('CA_VERSION_KEY')) {
     define('CA_VERSION_KEY', 'CA_version');
 }
-if (!defined('CA_VERSION_NUM')){
+if (!defined('CA_VERSION_NUM')) {
     define('CA_VERSION_NUM', '1.0.0');
 }
 add_option(CA_VERSION_KEY, CA_VERSION_NUM);
@@ -42,7 +42,7 @@ add_option(CA_VERSION_KEY, CA_VERSION_NUM);
  * **************************************** */
 
 add_theme_support('woocommerce');
-
+add_theme_support( 'post-thumbnails' );
 
 /* * ****************************************
  * Activation/Deactivation
@@ -114,12 +114,10 @@ function enqueue_bootsrap_css() {
         wp_enqueue_style('daterange_picker', get_template_directory_uri() . '/css/daterangepicker/daterangepicker-bs3.css', null, '');
         //WYSIHTML5 css
         wp_enqueue_style('wysihtml', get_template_directory_uri() . '/css/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css', null, '');
-        //AdminLTE css
-        wp_enqueue_style('admin_lte', get_template_directory_uri() . '/css/AdminLTE.css', null, '');
         //Bootstrap Overrides
         wp_enqueue_style('bootstrap_overrides', get_template_directory_uri() . '/css/bootstrap_overrides.css', null, '');
-        //style.css
-        wp_enqueue_style('style', get_template_directory_uri() . '/style.css', null, '');
+        //grayscale.css
+        wp_enqueue_style('grayscale_css', get_template_directory_uri() . '/css/grayscale.css', null, '');
     }
 }
 
@@ -135,18 +133,18 @@ function enqueue_bootsrap_js() {
     if (!is_admin()) {
 
 //        wp_deregister_script('jquery');
-
-        //<!--jQuery 2.0.2-->
-//        wp_register_script('jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js', '', '1.8.3');
+//
+//        //<!--jQuery 2.0.2-->
+//        wp_register_script('jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js', '', '1.8.3');
 //        wp_enqueue_script('jquery');
-
-        //<!-- Bootstrap -->
-        wp_register_script('bootstrap_js', get_template_directory_uri() . '/js/bootstrap.min.js', '', '');
-        wp_enqueue_script('bootstrap_js');
 
         //<!--jQuery UI 1.10.3-->
 //        wp_register_script('google_jquery_ui_js', get_template_directory_uri() . '/js/jquery-ui-1.10.3.min.js', '', '');
 //        wp_enqueue_script('google_jquery_ui_js');
+        //<!-- Bootstrap -->
+        wp_register_script('bootstrap_js', get_template_directory_uri() . '/js/bootstrap.min.js', '', '');
+        wp_enqueue_script('bootstrap_js');
+
 
         //<!-- Morris.js charts -->
         wp_register_script('morris_raphael_js', '//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js', '', '');
@@ -195,10 +193,22 @@ function enqueue_bootsrap_js() {
         //<!-- iCheck -->
         wp_register_script('icheck_js', get_template_directory_uri() . '/js/plugins/iCheck/icheck.min.js', '', '');
         wp_enqueue_script('icheck_js');
-        
-        // For use on the Front end (ie. Theme)
+
+         // For use on the Front end (ie. Theme)
         wp_register_script('casleevalentine_js', get_template_directory_uri() . '/js/casleevalentine.js', '', '');
         wp_enqueue_script('casleevalentine_js');
+        
+        // For use on the Front end (ie. Theme)
+        wp_register_script('easing_js', get_template_directory_uri() . '/js/easing.js', '', '');
+        wp_enqueue_script('easing_js');
+        
+        //<!--Google Map - Load before the js taht calls the map-->
+        wp_register_script('g_map', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false', '', '');
+        wp_enqueue_script('g_map');
+
+        // For use on the Front end (ie. Theme)
+        wp_register_script('grayscale_js', get_template_directory_uri() . '/js/grayscale.js', '', '');
+        wp_enqueue_script('grayscale_js');
 
 //        //<!-- AdminLTE for demo purposes -->
 //        wp_register_script('admin_lte_demo_js', get_template_directory_uri() . '/js/AdminLTE/demo.js', '', '');
